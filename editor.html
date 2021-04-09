@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="markdown.js"></script>
+		<style>
+			h1::before {
+			    content: "# ";
+			    opacity: .5;
+			}
+			h2::before {
+			    content: "## ";
+			    opacity: .5;
+			}
+			b::before,
+			b::after {
+			    content: "**";
+			    opacity: .5;
+			}
+		</style>
+	</head>
+</html>
+<body style="margin:0;font-family:Whitney, sans-serif">
+	<div class="editor" id="editor" contenteditable="true" style="width:100vw;height:100vh;position:absolute;padding:1rem;outline:none;top:0;left:0;"></div>
+	<script>editor.innerHTML = new Markdown(terms).toHTML()</script>
+</body>
+</html>
